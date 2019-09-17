@@ -1,0 +1,6 @@
+AddDefaultCharset WINDOWS-1251
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+###RewriteRule ^[a-zA-Z]+.php?id=(.*) payment.php?id=$1 [QSA,L]
+RewriteRule ^[a-zA-Z0-9]+(.php)? payment.php [QSA,L]

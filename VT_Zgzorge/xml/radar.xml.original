@@ -1,0 +1,653 @@
+﻿<krpano version="1.0.8">	
+	
+
+	
+	<style name="back0" url="%BASEDIR%/images/map0.jpg"   zorder="5" align="lefttop" handcursor="false" scalechildren="true" onloaded="update_title();" />	     
+	<style name="back1" url="%BASEDIR%/images/map1.jpg"   zorder="5" align="lefttop" handcursor="false" scalechildren="true"/>	     
+	<style name="back2" url="%BASEDIR%/images/map2.jpg"   zorder="5" align="lefttop" handcursor="false" scalechildren="true"/>	     
+	<style name="back2" url="%BASEDIR%/images/map3.jpg"   zorder="5" align="lefttop" handcursor="false" scalechildren="true"/>	     
+	<style name="back2" url="%BASEDIR%/images/map4.jpg"   zorder="5" align="lefttop" handcursor="false" scalechildren="true"/>	     
+		
+	<style name="radar_hs0" crop="0|0|42|42" onovercrop="0|42|42|42" ondowncrop="0|84|42|42" onold="0|126|42|42" zorder="10" edge="center" align="lefttop" url="%BASEDIR%/images/rhs.png" />	     
+	<style name="radar_hs1" crop="0|0|42|42" onovercrop="0|42|42|42" ondowncrop="0|84|42|42" onold="0|126|42|42" zorder="10" edge="center" align="lefttop" url="%BASEDIR%/images/rhs2.png"/>	     
+	
+	
+	<style name="radar_hsa" x="0" y="0" zorder="20" align="lefttop" keep="true" handcursor="false" edge="center" visible="false" alpha="1"/>	     
+	
+	<style name="style_radar_off" url="%BASEDIR%/images/radar-buttons.png"  scale="0.55" mscale="1" crop="120|0|60|60" onovercrop="120|60|60|60" ondowncrop="120|120|60|60" zorder="25" edge="lefttop" align="lefttop" />	     
+	<style name="style_radar_on"  url="%BASEDIR%/images/radar-buttons.png"  scale="0.55" mscale="1" crop="180|0|60|60" onovercrop="180|60|60|60" ondowncrop="180|120|60|60" zorder="25" edge="lefttop" align="lefttop" />	     
+	
+	<style name="style_radar_scale_on" url="%BASEDIR%/images/radar-buttons.png"  scale="0.55" mscale="1" crop="0|0|60|60" onovercrop="0|60|60|60" ondowncrop="0|120|60|60" zorder="6" edge="righttop" align="lefttop" />	     
+	<style name="style_radar_scale_off"  url="%BASEDIR%/images/radar-buttons.png"  scale="0.55" mscale="1" crop="60|0|60|60" onovercrop="60|60|60|60" ondowncrop="60|120|60|60" zorder="6" edge="righttop" align="lefttop" />	     
+	
+	<style name="style_textradar"  keep="true" url="%BASEDIR%/plugins/textfield.swf" align="lefttop" edge="left" textglow="3" width="400" textglowcolor="0x000000" x="0" ox="15" y="0" 
+			autoheight="true" background="false" alpha="1"	 zorder="55"  visible="false"  enabled="false" selectable="false" 
+			html=""	css="" 
+			base_css="p{font-family:sans-serif; margin-left:1; margin-right:1; text-align:left; font-weight: normal;"
+			/>
+	
+	<plugin name="map_menu_back"  url="%BASEDIR%/images/map_menu_back.png"  scale="1" alpha="0.6" base_width="420" zorder="40" edge="lefttop" align="lefttop" visible="false" keep="true" ox="0" />	     
+	
+	<style name="style_textmenu"  keep="true" url="%BASEDIR%/plugins/textfield.swf" align="lefttop" edge="lefttop" textglow="0" width="400" textglowcolor="0x000000" x="0" ox="10" y="0" oy="5"
+			autoheight="true" background="false" alpha="1"	 zorder="55"  visible="false"  enabled="false" selectable="false" 
+			html=""	css=""  onout="onout_rhs_menu();"
+	/>
+			
+			
+	<data name="text_menu_css"> 	a {color:#4fabf9; font-family:sans-serif; } 
+									a:hover { color:#c4e1f9;	text-decoration:none;}
+									p {font-size:12; font-weight:bold;} 
+									
+				</data>
+	<data name="text_menu_css2"> 	a {color:#4fabf9; font-family:sans-serif; } 
+									a:hover { color:#c4e1f9;	text-decoration:none;}
+									p {font-size:23; font-weight:bold;} 
+				</data>
+	
+	
+
+	
+	<radar>  </radar>
+	
+	<action name="init_radar_off_button">
+		set(enabled_radar_off_button, %1);
+	</action>
+	
+	<action name="init_radar_scale_button">
+		set(enabled_radar_scale_button, %1);
+	</action>
+	
+	<action name="init_all_radar">
+		set(enabled_radar, %1); 
+	</action>
+	
+	<action name="set_state_radar">
+		set(radar.general[1].state, %1); 
+		set(radar_state, %1);
+	</action>	
+	
+	<action name="unvisible_radar">
+		set(plugin[rhsa].visible, false); 
+		set(radar_active, false);
+	</action>
+	
+	<action name="set_radar_off_button">
+		set(radar.off_button[%1].x_start, %2);
+		set(radar.off_button[%1].y_start, %3);
+		set(radar.off_button[%1].x_end, %4);
+		set(radar.off_button[%1].y_end, %5);
+		set(radar.off_button[%1].style, %6);
+		if (%6=="under_scale_bn", 
+			addplugin(pl_temp);
+			plugin[pl_temp].loadstyle(style_radar_off);
+			subtxt(subcrop, plugin[pl_temp].crop, 6, 2);
+			if(ismobile, mul(subcrop, plugin[pl_temp].mscale), mul(subcrop, plugin[pl_temp].scale));
+			add(t12, radar.off_button[%1].y_start, subcrop);
+			add(t13, radar.off_button[%1].y_end, subcrop);
+			set(radar.off_button[%1].y_start, get(t12));
+			set(radar.off_button[%1].y_end, get(t13));
+		);
+	</action>
+	
+	<action name="set_radar_scale_param">
+		set(radar.scale_button[%1].x_start, %2);
+		set(radar.scale_button[%1].y_start, %3);
+		set(radar.scale_button[%1].x_end, %4);
+		set(radar.scale_button[%1].y_end, %5);
+		set(radar.scale_button[%1].style, %6);
+	</action>	
+	
+	<action name="set_radar_scale_button">
+		if(enabled_radar_scale_button, 
+			set(radar.scale_button[%1].x_start, %2);
+			set(radar.scale_button[%1].y_start, %3);
+			set(radar.scale_button[%1].x_end, %4);
+			set(radar.scale_button[%1].y_end, %5);
+			set(radar.scale_button[%1].x_scale, %6);
+			set(radar.scale_button[%1].y_scale, %7);
+		)
+	</action>
+	
+	<action name="set_radar_rhs">
+		set(radar.back[get(radar_count)].spotscale1, %1);
+		set(radar.back[get(radar_count)].spotscale2, %2);
+	</action>
+	
+	<action name="init_radar_view">
+		if(radar_count===null, set(radar_count, 0), inc(radar_count));
+		txtadd(tn, "backmap", get(radar_count)); 
+		set(radar.back[get(radar_count)].name, get(tn));
+		set(radar.back[get(radar_count)].style, %1);
+		set(radar.back[get(radar_count)].fillcolor, %2);
+		set(radar.back[get(radar_count)].linecolor, %3);
+		set(radar.back[get(radar_count)].x_start, %4); 
+		set(radar.back[get(radar_count)].y_start, %5);
+		set(radar.back[get(radar_count)].x_end, %6);
+		set(radar.back[get(radar_count)].y_end, %7);
+		set(radar.back[get(radar_count)].scale1, %8);
+		set(radar.back[get(radar_count)].scale2, %9);
+	</action>
+	
+	<action name="set_rhs_name">
+		addplugin(rhs_name);
+		set(plugin[rhs_name].url, %1);
+		set(rhs_name_width, %2);
+		div(rhs_name_height, %3, scene.count);
+		plugin[rhs_name].loadstyle(radar_hs_name);
+	</action>
+	
+	<action name="set_link_name">
+		addplugin(link_name);
+		set(plugin[link_name].url, %1);
+		set(link_name_width, %2);
+		div(link_name_height, %3, get(radar.link.count));
+		plugin[link_name].loadstyle(radar_link_name);
+	</action>
+	
+	<action name="radar_edit_mode">
+		set(radar_edit, %1);
+	</action>
+	
+	<action name="set_rhs">
+		if(rhs_count===null, set(rhs_count, 0), inc(rhs_count));
+		txtadd(tn, "rhs", %1); 
+		set(radar.spot[%1].name, get(tn));
+		set(radar.spot[%1].scene, %1);
+		set(radar.spot[%1].radar, %2);
+		set(radar.spot[%1].style, %3);
+		set(radar.spot[%1].x, %4);
+		set(radar.spot[%1].y, %5);
+		set(radar.spot[%1].heading, %6);
+		set(radar.spot[%1].new, true); 
+		txtadd(t, "%BASEDIR%/images/map_mask", %1, ".png");	
+		set(radar.spot[%1].mask, get(t));
+		set(radar.spot[%1].scale, %7);
+		set(radar.spot[%1].mscale, %8);
+		set(radar.spot[%1].text, %9);
+		set(radar.spot[%1].smallradar, %10);
+	</action>	
+	
+	<action name="set_rhs_text">
+		set(radar.general[1].textsize, %1); 
+		set(radar.general[1].textcolor, %2); 
+	</action>
+	
+	<action name="set_rhs_image">
+		set(rhs_image_scale, %2);
+		set(rhs_image_mscale, %3);
+	</action>
+	
+	<action name="set_rhs_menu">
+		set(radar.menu[%1].text, %2);
+	</action>
+	
+	
+	<action name="set_rhsa">
+		addplugin(rhsa);
+		set(plugin[rhsa].url,%1);
+		if(isdesktop, set(plugin[rhsa].scale, %2), set(plugin[rhsa].scale, %3));
+		plugin[rhsa].loadstyle(radar_hsa);
+		set(plugin[rhsa].zorder, 30);
+		set(plugin[rhsa].onout, "onout_rhs()");
+	</action>
+	
+	<action name="set_rhs_link">
+		if(link_count===null, set(link_count, 0), inc(link_count));
+		txtadd(t_rl, "link", get(link_count));
+		set(radar.link[get(link_count)].name, get(t_rl));
+		set(radar.link[get(link_count)].number, get(link_count));
+		set(radar.link[get(link_count)].style, %1);
+		set(radar.link[get(link_count)].in, %2);
+		set(radar.link[get(link_count)].out, %3);
+		set(radar.link[get(link_count)].scene, %4);
+		set(radar.link[get(link_count)].x, %5);
+		set(radar.link[get(link_count)].y, %6);
+	</action>
+	
+	<action name="onclick_rhs"> 
+		txtadd(tscene, "scene", get(scene));
+		set(plugin[rhs_name].visible, false);
+		set(plugin[link_name].visible, false);
+		set(plugin[rhsa].visible, false);
+		loadscene(get(tscene), null,MERGE,BLEND(1));
+<!-- вставка из elements  -->	set(plugin[text_title].y, 5);
+	</action>
+	
+	<action name="create_rhs_menu"> 
+		for(set(i,0), i LT %1, inc(i), 
+			txtadd(tmn, "");
+			txtadd(tmn, "plugin_menu", get(i));
+			addplugin(get(tmn));
+			plugin[get(tmn)].loadstyle(style_textmenu);
+			set(plugin[get(tmn)].css, get(data[text_menu_css].content));
+
+			ifnot(radar.general[1].bigscale,
+				set(plugin[get(tmn)].css, data:text_menu_css2);
+			); 
+			
+			set(plugin[get(tmn)].parent, get(nback));
+		);
+		set(sum_menu, get(i));
+	</action>
+	
+	<action name="onover_rhs">
+		onout_rhs_menu();
+		txtadd(trs, %1, "");
+		subtxt(trs, trs, 0, 4);
+		if(trs=="menu",
+			txtadd(tmn, "");
+			txtadd(tmn, "plugin_", %1);
+			set(tr_text, "");
+			copy(tr_text, %1);
+			set(plugin[get(tmn)].html, get(tr_text));
+			set(plugin[get(tmn)].x, get(x));
+			set(plugin[get(tmn)].y, get(y));
+			set(plugin[get(tmn)].enabled, true);
+
+			set(plugin[map_menu_back].x, get(x));
+			set(plugin[map_menu_back].y, get(y));
+			set(plugin[map_menu_back].enabled, false);
+			if(radar.general[1].bigscale,
+				add(plugin[map_menu_back].height, get(plugin[get(tmn)].height), 10);
+				add(plugin[map_menu_back].width, get(plugin[get(tmn)].width), 15);
+				,
+				add(plugin[map_menu_back].height, get(plugin[get(tmn)].height), 20);
+				add(plugin[map_menu_back].width, get(plugin[get(tmn)].width), 30);
+			);
+			set(plugin[get(tmn)].visible, true);
+			set(plugin[map_menu_back].visible, true);
+			set(tek_menu, get(tmn));			
+		,
+			set(tr_text, "");
+			txtadd(tr_text, <p  align="left">, %1, </p>);
+			set(plugin[textradar].html, get(tr_text));
+			set(plugin[textradar].visible, true);
+			set(plugin[textradar].x, get(x));
+			set(plugin[textradar].y, get(y));
+		);
+		
+	</action>
+	
+	<action name="onout_rhs_menu">
+		set(plugin[map_menu_back].visible, false);
+		if(tek_menu!==null, set(plugin[get(tek_menu)].visible, false););
+	</action>
+	
+	
+	<action name="onout_rhs">
+		set(plugin[textradar].visible, false); 
+	</action>
+	
+	<action name="transit">
+		set(plugin[map_menu_back].visible, false);
+		set(plugin[rhs_name].visible, false);
+		set(plugin[link_name].visible, false);
+		set(plugin[rhsa].visible, false);
+		set(plugin[get(tek_menu)].visible, false);
+		set(plugin[map_menu_back].visible, false);
+<!-- вставка из elements  -->	set(plugin[text_title].y, 5);
+		loadscene(%1);
+	</action>
+		
+	<action name="onclick_link">
+		txtadd(tlink, "pano", get(scene));	
+		loadscene(get(tlink), null,MERGE,BLEND(1));
+		set(plugin[rhs_name].visible, false);
+		set(plugin[link_name].visible, false);
+	</action>
+	
+	<action name="onover_link">
+		mul(t_ol,link_name_height, get(number));
+		txtadd(tc, "0|", get(t_ol), "|", get(link_name_width), "|",  get(link_name_height));
+		set(plugin[link_name].crop, get(tc));
+		add(t_ol,x,4);
+		set(plugin[link_name].x, get(t_ol));
+		add(t_ol,y,-4);
+		set(plugin[link_name].y, get(t_ol));
+		set(plugin[link_name].visible, true);
+		set(plugin[link_name].alpha, 1);
+	</action>
+	
+	<action name="onout_link">
+		tween(plugin[link_name].alpha, 0, 0.1, default, set(plugin[link_name].visible, false));
+	</action>
+	
+	<action name="add_rhs">
+		set(n_radar, get(radar.spot[%1].radar)); 
+		div(mul_hs, 1, radar.back[get(n_radar)].scale1); 
+		mul(mul_hs, radar.back[get(n_radar)].spotscale1); 
+		if(ismobile, mul(scale_hs_small, rhs_image_mscale, mul_hs), mul(scale_hs_small, rhs_image_scale, mul_hs));
+		
+		div(mul_hs, 1, radar.back[get(n_radar)].scale2); 
+		mul(mul_hs, radar.back[get(n_radar)].spotscale2); 
+		if(ismobile, mul(scale_hs_big, rhs_image_mscale, mul_hs), mul(scale_hs_big, rhs_image_scale, mul_hs)); 
+
+	
+		for(set(i,0), i LE radar.spot.count, inc(i), 
+			if(radar.spot[%i].radar == n_radar, 
+							copy(tmn2,radar.spot[%i].style);
+							ifnot(tmn2=="menu",
+									set(tn, get(radar.spot[%i].name));
+									addplugin(get(tn));
+									
+									plugin[get(tn)].loadstyle(get(radar.spot[%i].style));
+									set(plugin[get(tn)].x, get(radar.spot[%i].x));
+									set(plugin[get(tn)].y, get(radar.spot[%i].y));
+									set(plugin[get(tn)].text, get(radar.spot[%i].text));
+									set(plugin[get(tn)].align, lefttop);
+									set(plugin[get(tn)].scene, get(radar.spot[%i].scene));
+									set(plugin[get(tn)].onclick, "onclick_rhs();");
+									set(plugin[get(tn)].onover, "onover_rhs(get(text)); " );
+									set(plugin[get(tn)].onout, "onout_rhs();  " );
+									
+									set(plugin[get(tn)].parent, get(radar.back[get(n_radar)].name)); 
+									if(radar.spot[%i].smallradar==false, set(plugin[get(tn)].visible, false)); 
+									set(plugin[get(tn)].scale, get(scale_hs_small));
+									
+									ifnot(radar.spot[%i].new, 
+												set(plugin[get(tn)].crop, get(plugin[get(tn)].onold));
+												if (i==%1,	set(plugin[get(tn)].scale, 0.1);
+															set(plugin[get(tn)].onover, "");
+															set(plugin[rhsa].parent, get(radar.back[get(n_radar)].name));
+															set(plugin[rhsa].x, get(radar.spot[%i].x));	
+															set(plugin[rhsa].y, get(radar.spot[%i].y));
+															set(plugin[rhsa].scale, get(scale_hs_small));
+															set(plugin[rhsa].text, get(radar.spot[%i].text));
+															set(plugin[rhsa].onover, "onover_rhs(get(text))");
+												);
+									);
+									
+									,
+									
+									ifnot(radar.spot[%i].new, 
+												if (i==%1,	set(plugin[rhsa].parent, get(radar.back[get(n_radar)].name));
+															set(plugin[rhsa].x, get(radar.spot[%i].x));	
+															set(plugin[rhsa].y, get(radar.spot[%i].y));
+															set(plugin[rhsa].scale, get(scale_hs_small));
+															set(plugin[rhsa].text, get(radar.spot[%i].text));
+															set(plugin[rhsa].onover, "onover_rhs(get(text))");
+												);
+									);								
+							);
+
+			);
+		); 
+
+	</action>
+	
+	<action name="set_radar_hide">
+<!-- вставка из elements-->	set(plugin[text_title].visible,false);	
+		set(t1, get(radar.off_button[get(n_radar)].x_end));
+		set(t2, get(radar.off_button[get(n_radar)].y_end));
+		sub(t1, 70);
+		tween(plugin[radar_on_off].x, get(t1), 0.5); 
+		tween(plugin[radar_on_off].y, get(t2), 0.5); 
+		plugin[radar_on_off].loadstyle(style_radar_on); 
+		set(radar.general[1].hide, true);
+		set(radar_hide, "true");
+		set(t1, get(radar.back[get(n_radar)].x_end));
+		set(t2, get(radar.back[get(n_radar)].y_end));
+		sub(t1, 70);
+		tween(plugin[get(nback)].x, get(t1),0.5);
+		tween(plugin[get(nback)].y, get(t2),0.5);
+		set(t_rh,get(plugin[radar_on_off].mscale));
+		if(ismobile,  set(plugin[radar_on_off].scale, get(t_rh)););
+	</action>	
+	
+	<action name="set_radar_open">
+<!-- вставка из elements-->	
+		mul(ty23, get(plugin[get(nback)].height), get(plugin[get(nback)].scale));
+		set(plugin[text_title].y, get(ty23));
+		set(plugin[text_title].x, 5);
+
+		set(radar.general[1].state, "open");
+		set(radar_state, "open");
+		set(radar_hide, "false");
+		set(radar.general[1].hide, false);
+		set(t1, get(radar.off_button[get(n_radar)].x_start));
+		set(t2, get(radar.off_button[get(n_radar)].y_start));
+		tween(plugin[radar_on_off].x, get(t1), 0.5); 
+		tween(plugin[radar_on_off].y, get(t2), 0.5); 
+		plugin[radar_on_off].loadstyle(style_radar_off); 
+		tween(plugin[get(nback)].x, get(radar.back[get(n_radar)].x_start),0.5);
+		tween(plugin[get(nback)].y, get(radar.back[get(n_radar)].y_start),0.5);
+		set(t_ro,get(plugin[radar_on_off].mscale));
+		if(ismobile,  set(plugin[radar_on_off].scale, get(t_ro)););
+		
+		set(t3, get(radar.scale_button[get(n_radar)].x_start));
+		set(t4, get(radar.scale_button[get(n_radar)].y_start));
+		tween(plugin[radar_scale].x, get(t3), 0.5); 
+		tween(plugin[radar_scale].y, get(t4), 0.5); 
+	</action>
+	
+	<action name="set_radar_close">
+<!-- вставка из elements-->	set(plugin[text_title].y, 5);
+							set(plugin[text_title].x, 40);
+		set(t1, get(radar.off_button[get(n_radar)].x_end));
+		set(t2, get(radar.off_button[get(n_radar)].y_end));
+		tween(plugin[radar_on_off].x, get(t1), 0.5); 
+		tween(plugin[radar_on_off].y, get(t2), 0.5); 
+		plugin[radar_on_off].loadstyle(style_radar_on); 
+		set(radar.general[1].state, "close");
+		set(radar.general[1].hide, false);
+		set(radar_state, "close");
+		set(radar_hide, "false");
+		tween(plugin[get(nback)].x, get(radar.back[get(n_radar)].x_end),0.5);
+		tween(plugin[get(nback)].y, get(radar.back[get(n_radar)].y_end),0.5);
+		set(t_rc,get(plugin[radar_on_off].mscale));
+		if(ismobile,  set(plugin[radar_on_off].scale, get(t_rc)););
+
+		set(t3, get(radar.scale_button[get(n_radar)].x_end));
+		set(t4, get(radar.scale_button[get(n_radar)].y_end));
+		tween(plugin[radar_scale].x, get(t3), 0.5); 
+		tween(plugin[radar_scale].y, get(t4), 0.5); 
+	</action>
+	
+	<action name="onclick_radar_on_off">
+		if(radar.general[1].state == "open", set_radar_close(),
+			if(radar.general[1].state == "close", 	set_radar_open(); );
+		);
+	</action>
+	
+	<action name="onclick_radar_scale">
+		onout_rhs_menu();
+		if(radar.general[1].bigscale,
+			tween(plugin[get(nback)].scale, get(radar.back[%n_radar].scale1), 0.5);
+			tween(plugin[radar_scale].x, get(radar.scale_button[%n_radar].x_start), 0.5, default,
+					set(plugin[radar_on_off].visible, true););
+			set(radar.general[1].bigscale, false);
+			plugin[radar_scale].loadstyle(style_radar_scale_on);
+			set(plugin[rhsa].scale, get(radar.back[get(n_radar)].spotscale1));
+			for(set(i,0), i LE radar.spot.count, inc(i), 
+				set(tn, get(radar.spot[%i].name));
+				if(radar.spot[%i].radar == n_radar, 
+						if(radar.spot[%i].smallradar==false, set(plugin[get(tn)].visible, false));
+				);
+				set(plugin[get(tn)].scale, get(scale_hs_small));
+				set(plugin[rhsa].scale, get(scale_hs_small));
+			); 
+			div(tms, 1, radar.back[get(n_radar)].scale1);
+			mul(tms, get(radar.general[1].textsize));
+			set(tr_css, "");
+			txtadd(tr_css, get(plugin[textradar].base_css), "font-size:", get(tms), "; ", "color: ", get(radar.general[1].textcolor), ";}");
+			set(plugin[textradar].css, get(tr_css) );
+			
+			for(set(i,0), i LT sum_menu, inc(i), 
+				txtadd(tmn, "");
+				txtadd(tmn, "plugin_menu", get(i));
+				set(plugin[get(tmn)].css, get(data[text_menu_css2].content));
+				set(plugin[get(tmn)].width, 500);
+			);
+			
+			,
+			
+			set(plugin[radar_on_off].visible, false);
+			tween(plugin[get(nback)].scale, get(radar.back[%n_radar].scale2), 0.5);
+			tween(plugin[radar_scale].x, get(radar.scale_button[%n_radar].x_scale), 0.5);
+			set(radar.general[1].bigscale, true);
+			plugin[radar_scale].loadstyle(style_radar_scale_off);
+			set(plugin[rhsa].scale, get(radar.back[get(n_radar)].spotscale2));
+			for(set(i,0), i LE radar.spot.count, inc(i), 
+				set(tn, get(radar.spot[%i].name));
+				if(radar.spot[%i].radar == n_radar, 
+							set(plugin[get(tn)].visible, true);
+				);
+				set(plugin[get(tn)].scale, get(scale_hs_big));
+				set(plugin[rhsa].scale, get(scale_hs_big));
+			); 
+			set(tr_css, "");
+			txtadd(tr_css, get(plugin[textradar].base_css), "font-size:", get(radar.general[1].textsize), "; ", "color: ", get(radar.general[1].textcolor), ";}");
+			set(plugin[textradar].css, get(tr_css));
+			
+			for(set(i,0), i LT sum_menu, inc(i), 
+				txtadd(tmn, "");
+				txtadd(tmn, "plugin_menu", get(i));
+				set(plugin[get(tmn)].css, get(data[text_menu_css].content));
+				set(plugin[get(tmn)].width, 300);
+			);
+		);
+	</action>
+	
+	<action name="create_radar">
+		set(radar_active, true);
+		set(plugin[rhsa].visible, true);
+		set(n_radar, get(radar.spot[%1].radar));
+		set(radar.spot[%1].new, false); <!-- ставим флаг о неактивности rhs -->
+
+		set(nback, get(radar.back[%n_radar].name)); 
+		addplugin(get(nback));
+		plugin[get(nback)].loadstyle(get(radar.back[%n_radar].style));
+		set(plugin[get(nback)].scale, get(radar.back[%n_radar].scale1));
+		if(radar.general[1].state == "open",
+				set(plugin[get(nback)].x, get(radar.back[get(n_radar)].x_start));
+				set(plugin[get(nback)].y, get(radar.back[get(n_radar)].y_start));
+		);
+		if(radar.general[1].state == "close",				
+				set(plugin[get(nback)].x, get(radar.back[get(n_radar)].x_end));
+				set(plugin[get(nback)].y, get(radar.back[get(n_radar)].y_end));
+		);
+		if(radar.general[1].hide,	
+				set(t1, get(radar.back[get(n_radar)].x_end));
+				set(t2, get(radar.back[get(n_radar)].y_end));
+				sub(t1, 50);
+				set(plugin[get(nback)].x, get(t1));
+				set(plugin[get(nback)].y, get(t2));
+		);
+
+		add_rhs(%1);
+
+		copy(tmn2,radar.spot[%1].style);
+		ifnot(tmn2=="menu", 
+				txtadd(rdr, "radar", get(n_radar)); 
+				addplugin(get(rdr));
+				if (isflash, set(plugin[get(rdr)].url,"%BASEDIR%/plugins/radar.swf"),
+							set(plugin[get(rdr)].alturl, "%BASEDIR%/plugins/radar.js"); );
+				set(plugin[get(rdr)].align, center);
+				set(plugin[get(rdr)].edge, center);
+				set(plugin[get(rdr)].parent, get(radar.spot[%1].name));
+				set(plugin[get(rdr)].heading, get(radar.spot[%1].heading));
+				set(plugin[get(rdr)].fillcolor, get(radar.back[get(n_radar)].fillcolor));
+				set(plugin[get(rdr)].linecolor, get(radar.back[get(n_radar)].linecolor));
+				set(plugin[get(rdr)].fillalpha, 0.5);
+				if(isflash, set(plugin[get(rdr)].scale, get(radar.spot[%1].scale));, set(plugin[get(rdr)].scale, get(radar.spot[%1].mscale));); 
+
+				ifnot(radar_edit, 
+					ifnot(ishtml5, 
+						addplugin(radar_mask);
+						set(plugin[radar_mask].url, get(radar.spot[%1].mask));
+						set(plugin[radar_mask].align, lefttop);
+						set(plugin[radar_mask].zorder, 0);
+						set(plugin[radar_mask].x, 0);
+						set(plugin[radar_mask].y, 0);
+						set(plugin[radar_mask].handcursor, false);
+						set(plugin[radar_mask].parent, get(nback)); 
+						ifnot(radar_edit, set(plugin[get(rdr)].mask, plugin[radar_mask]); );
+					);
+				);
+		);
+		if (radar_edit, set(plugin[get(rdr)].editmode, get(radar_edit)); 
+						addplugin(editor);
+						set(plugin[editor].url, "%BASEDIR%/plugins/editor.swf");
+		); 
+		
+		if(enabled_radar_off_button, 
+						addplugin(radar_on_off); 
+						if(radar.general[1].state=="open",
+									plugin[radar_on_off].loadstyle(style_radar_off);
+									set(t2, get(radar.off_button[get(n_radar)].y_start));
+									set(t1, get(radar.off_button[get(n_radar)].x_start));
+									set(plugin[radar_on_off].x, get(t1)); 
+									set(plugin[radar_on_off].y, get(t2));
+						);
+						if(radar.general[1].state=="close",
+									plugin[radar_on_off].loadstyle(style_radar_on);
+									set(t2, get(radar.off_button[get(n_radar)].y_end));
+									set(t1, get(radar.off_button[get(n_radar)].x_end));
+									set(plugin[radar_on_off].x, get(t1)); 
+									set(plugin[radar_on_off].y, get(t2)); 
+						);
+						if(radar.general[1].state="hide",
+									plugin[radar_on_off].loadstyle(style_radar_on);
+									set(t2, get(radar.off_button[get(n_radar)].y_end));
+									set(t1, get(radar.off_button[get(n_radar)].x_end));
+									sub(t1, 50);
+									set(plugin[radar_on_off].x, get(t1)); 
+									set(plugin[radar_on_off].y, get(t2)); 
+						);
+						set(t,get(plugin[radar_on_off].mscale));
+						if (ismobile, set(plugin[radar_on_off].scale, get(t)) );
+						set(plugin[radar_on_off].onclick, "onclick_radar_on_off();"); 
+		);
+		ifnot(ismobile, 
+			if(enabled_radar_scale_button, 
+							addplugin(radar_scale); 
+							set(radar.general[1].bigscale, false);
+							if(radar.general[1].state=="open",
+										plugin[radar_scale].loadstyle(style_radar_scale_on);
+										set(t2, get(radar.scale_button[get(n_radar)].y_start));
+										set(t1, get(radar.scale_button[get(n_radar)].x_start));
+										set(plugin[radar_scale].x, get(t1)); 
+										set(plugin[radar_scale].y, get(t2));
+							);
+							if(radar.general[1].state=="close",
+										plugin[radar_scale].loadstyle(style_radar_scale_on);
+										set(t2, get(radar.scale_button[get(n_radar)].y_end));
+										set(t1, get(radar.scale_button[get(n_radar)].x_end));
+										set(plugin[radar_scale].x, get(t1)); 
+										set(plugin[radar_scale].y, get(t2)); 
+							);
+							if(radar.general[1].state=="hide",
+										plugin[radar_scale].loadstyle(style_radar_scale_on);
+										set(t2, get(radar.scale_button[get(n_radar)].y_end));
+										set(t1, get(radar.scale_button[get(n_radar)].x_end));
+										sub(t1, 50);
+										set(plugin[radar_on_off].x, get(t1)); 
+										set(plugin[radar_on_off].y, get(t2)); 
+							);
+							set(t,get(plugin[radar_scale].mscale));
+							if (ismobile, set(plugin[radar_scale].scale, get(t)) );
+							set(plugin[radar_scale].onclick, "onclick_radar_scale();"); 
+							set(plugin[get(nback)].onclick, "onclick_radar_scale();"); 
+			);
+		);
+		
+		addplugin(textradar);
+		plugin[textradar].loadstyle(style_textradar);
+		div(tms, 1, radar.back[get(n_radar)].scale1);
+		mul(tms, get(radar.general[1].textsize)); 
+		set(tr_text, ""); 
+		set(tr_css, "");
+		txtadd(tr_css, get(plugin[textradar].base_css), "font-size:", get(tms), "; ", "color: ", get(radar.general[1].textcolor), ";}");
+		set(plugin[textradar].css, get(tr_css)); 
+		set(plugin[textradar].html, get(tr_text));
+		set(plugin[textradar].visible, false);
+		set(plugin[textradar].parent, get(nback));
+		
+		create_rhs_menu(10);
+		set(plugin[map_menu_back].parent, get(nback));
+		
+		set(plugin[get(rdr)].onover, ""); 
+	</action>
+		
+	
+</krpano>

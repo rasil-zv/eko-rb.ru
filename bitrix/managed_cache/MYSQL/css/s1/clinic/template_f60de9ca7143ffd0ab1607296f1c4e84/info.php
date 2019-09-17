@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/clinic/components/bitrix/menu/top_nav_multilevel/style.css" => "15686089253715","/bitrix/templates/clinic/components/bitrix/menu/footer_nav_multilevel/style.css" => "15686089253715","/bitrix/js/main/core/css/core_panel.css" => "156860892162290","/bitrix/js/fileman/sticker.css" => "156860892124594",)); ?>

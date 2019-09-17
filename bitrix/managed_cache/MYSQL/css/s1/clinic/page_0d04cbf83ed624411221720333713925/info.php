@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/clinic/components/bitrix/catalog.section.list/prices_list/style.css" => "15686089256236",)); ?>

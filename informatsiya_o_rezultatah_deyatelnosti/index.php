@@ -1,0 +1,5 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("description", "Статистика успешных программ ЭКО. В клинике «Здоровье женщины и мужчины» ведут прием опытные специалисты, используются новейшее оборудование и самые актуальные методы лечения.");
+$APPLICATION->SetTitle("Статистика успешных программ ЭКО");
+?><img width="960" alt="1_1.jpg" src="/upload/medialibrary/a94/a94c9a05b6eb4a57b75b5fcbc3fef627.jpg" height="718" title="1_1.jpg"><img width="960" alt="1_6.jpg" src="/upload/medialibrary/3ff/3ff7a0798701acfdddb7bf2677ef6a3d.jpg" height="718" title="1_6.jpg"><img width="960" alt="1_2.jpg" src="/upload/medialibrary/b2a/b2a0e64c1561c6f0364a977113d49778.jpg" height="718" title="1_2.jpg"><img width="960" alt="1_3.jpg" src="/upload/medialibrary/570/570affdeca7ded5cd8223ea0692bf0c4.jpg" height="718" title="1_3.jpg"><img width="960" alt="1_4.jpg" src="/upload/medialibrary/986/986bac5235f52b1bacbdf1746db7ad68.jpg" height="718" title="1_4.jpg"><img width="960" alt="1_5.jpg" src="/upload/medialibrary/84b/84b5d723667b8899ebd5c53aa0bbfaed.jpg" height="718" title="1_5.jpg"><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

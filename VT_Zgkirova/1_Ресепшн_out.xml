@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour start="node1">
+  <panorama id="node1">
+    <view fovmode="0" pannorth="0">
+      <start pan="315" fov="70" tilt="0"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="2 этаж" target="" pan="-26.0916" skinid="hotspot" url="{node2}" id="Point01" tilt="-6.09739"/>
+      <hotspot title="3 этаж" target="" pan="-26.5623" skinid="hotspot" url="{node4}" id="Point02" tilt="4.22983"/>
+    </hotspots>
+    <media/>
+    <input width="2500" height="2500" leveltilesize="512" levelbias="0.4" overlap="1" leveltileurl="tiles/1_Ресепшн/c%c_l%r_%y_%x.jpg">
+      <level width="2500" height="2500" preload="0"/>
+      <level width="1250" height="1250" preload="0"/>
+      <level width="625" height="625" preload="0"/>
+      <level width="156" preview="1" height="156" preload="1"/>
+      <preview color="0x808080"/>
+    </input>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="8.00" noderandom="1"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node2">
+    <view fovmode="0" pannorth="0">
+      <start pan="91.5" fov="70" tilt="-0.5"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="1 этаж" target="" pan="98.55710000000001" skinid="hotspot" url="{node1}" id="Point02" tilt="-6.25705"/>
+      <hotspot title="3 этаж" target="" pan="98.91" skinid="hotspot" url="{node4}" id="Point03" tilt="4.83067"/>
+      <hotspot title="Процедурный кабинет" target="" pan="114.573" skinid="hotspot_photo" url="photos/0018_1920.jpg" id="Point01" tilt="4.72119"/>
+      <hotspot title="Кабинет КТГ/ЭКГ" target="" pan="115.017" skinid="hotspot_photo" url="photos/0028_29_30.jpg" id="Point04" tilt="-4.02703"/>
+      <hotspot title="Кабинет УЗИ" target="" pan="-130.888" skinid="hotspot_photo" url="photos/5621.jpg" id="Point05" tilt="4.70962"/>
+      <hotspot title="Кабинет приёма" target="" pan="-46.1397" skinid="hotspot_photo" url="photos/1697.jpg" id="Point06" tilt="3.73378"/>
+      <hotspot title="Фиброгастроскопия" target="" pan="-44.6516" skinid="hotspot_photo" url="photos/1698.jpg" id="Point07" tilt="-3.66712"/>
+      <hotspot title="Кабинет малоинвазивных манипуляций" target="" pan="-56.1717" skinid="hotspot_photo" url="photos/1717_8_9.jpg" id="Point08" tilt="4.89953"/>
+      <hotspot title="Кабинет УЗИ беременных" target="" pan="12.9005" skinid="hotspot_photo" url="photos/1705.jpg" id="Point09" tilt="6.18897"/>
+      <hotspot title="Кабинет приёма уролога, маммолога" target="" pan="23.4649" skinid="hotspot_photo" url="photos/1691.jpg" id="Point10" tilt="5.82676"/>
+      <hotspot title="Кабинет приёма гинеколога" target="" pan="23.4649" skinid="hotspot_photo" url="photos/1702.jpg" id="Point11" tilt="-4.68997"/>
+      <hotspot title="Смотровой кабинет гинеколога" target="" pan="23.4649" skinid="hotspot_photo" url="photos/1711.jpg" id="Point12" tilt="-15.1164"/>
+      <hotspot title="Кабинет приёма уролога, маммолога" target="" pan="12.9005" skinid="hotspot_photo" url="photos/5606.jpg" id="Point13" tilt="-4.98229"/>
+      <hotspot title="Физ. кабинет" target="" pan="12.9005" skinid="hotspot_photo" url="photos/5756.jpg" id="Point14" tilt="-16.016"/>
+    </hotspots>
+    <media/>
+    <input width="2500" height="2500" leveltilesize="512" levelbias="0.4" overlap="1" leveltileurl="tiles/2_2 этаж/c%c_l%r_%y_%x.jpg">
+      <level width="2500" height="2500" preload="0"/>
+      <level width="1250" height="1250" preload="0"/>
+      <level width="625" height="625" preload="0"/>
+      <level width="156" preview="1" height="156" preload="1"/>
+      <preview color="0x808080"/>
+    </input>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="8.00" noderandom="1"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node3">
+    <view fovmode="0" pannorth="0">
+      <start pan="138" fov="70" tilt="-2"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="2 этаж" target="" pan="112.253" skinid="hotspot" url="{node4}" id="Point01" tilt="-5.28277"/>
+    </hotspots>
+    <media/>
+    <input width="2500" height="2500" leveltilesize="512" levelbias="0.4" overlap="1" leveltileurl="tiles/3_Лабоработрия/c%c_l%r_%y_%x.jpg">
+      <level width="2500" height="2500" preload="0"/>
+      <level width="1250" height="1250" preload="0"/>
+      <level width="625" height="625" preload="0"/>
+      <level width="156" preview="1" height="156" preload="1"/>
+      <preview color="0x808080"/>
+    </input>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="8.00" noderandom="1"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node4">
+    <view fovmode="0" pannorth="0">
+      <start pan="203.5" fov="70" tilt="-3"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="1 этаж" target="" pan="-34.2844" skinid="hotspot" url="{node1}" id="Point01" tilt="-4.59946"/>
+      <hotspot title="2 этаж" target="" pan="-34.2927" skinid="hotspot" url="{node2}" id="Point02" tilt="4.51077"/>
+      <hotspot title="Большая операционная" target="" pan="-171.957" skinid="hotspot" url="{node5}" id="Point03" tilt="-5.0589"/>
+      <hotspot title="Эмбриология" target="" pan="153.669" skinid="hotspot" url="{node3}" id="Point04" tilt="-5.97124"/>
+      <hotspot title="Стационар" target="" pan="153.927" skinid="hotspot_photo" url="photos/9900.jpg" id="Point05" tilt="5.14831"/>
+      <hotspot title="Кабинет оформления документов для получения квот" target="" pan="-122.003" skinid="hotspot_photo" url="photos/9921.jpg" id="Point06" tilt="6.18183"/>
+      <hotspot title="Сперменная" target="" pan="-129.312" skinid="hotspot_photo" url="photos/9924.jpg" id="Point07" tilt="6.79169"/>
+      <hotspot title="Кабинет приёма репродуктолога" target="" pan="-121.721" skinid="hotspot_photo" url="photos/9937.jpg" id="Point08" tilt="-0.981361"/>
+      <hotspot title="Кабинет приёма репродуктолога" target="" pan="-128.592" skinid="hotspot_photo" url="photos/9963.jpg" id="Point09" tilt="-1.04013"/>
+      <hotspot title="Кабинет приёма репродуктолога" target="" pan="-121.432" skinid="hotspot_photo" url="photos/9953.jpg" id="Point10" tilt="-8.55702"/>
+      <hotspot title="Кабинет приёма репродуктолога" target="" pan="-128.511" skinid="hotspot_photo" url="photos/9990.jpg" id="Point11" tilt="-9.081379999999999"/>
+    </hotspots>
+    <media/>
+    <input width="2500" height="2500" leveltilesize="512" levelbias="0.4" overlap="1" leveltileurl="tiles/4_3 этаж/c%c_l%r_%y_%x.jpg">
+      <level width="2500" height="2500" preload="0"/>
+      <level width="1250" height="1250" preload="0"/>
+      <level width="625" height="625" preload="0"/>
+      <level width="156" preview="1" height="156" preload="1"/>
+      <preview color="0x808080"/>
+    </input>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="8.00" noderandom="1"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+  <panorama id="node5">
+    <view fovmode="0" pannorth="0">
+      <start pan="161" fov="70" tilt="1"/>
+      <min pan="0" fov="5" tilt="-90"/>
+      <max pan="360" fov="120" tilt="90"/>
+    </view>
+    <userdata title="" datetime="" description="" copyright="" tags="" author="" source="" comment="" info="" longitude="" latitude=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" backgroundalpha="1" enabled="1" height="20" backgroundcolor="0xffffff" bordercolor="0x000000" border="1" textcolor="0x000000" background="1" borderalpha="1" borderradius="1" wordwrap="1" textalpha="1"/>
+      <polystyle mode="0" backgroundalpha="0.2509803921568627" backgroundcolor="0x0000ff" bordercolor="0x0000ff" borderalpha="1"/>
+      <hotspot title="3 этаж" target="" pan="-175.19" skinid="hotspot" url="{node4}" id="Point01" tilt="-5.57736"/>
+    </hotspots>
+    <media/>
+    <input width="2500" height="2500" leveltilesize="512" levelbias="0.4" overlap="1" leveltileurl="tiles/5_Хирургия/c%c_l%r_%y_%x.jpg">
+      <level width="2500" height="2500" preload="0"/>
+      <level width="1250" height="1250" preload="0"/>
+      <level width="625" height="625" preload="0"/>
+      <level width="156" preview="1" height="156" preload="1"/>
+      <preview color="0x808080"/>
+    </input>
+    <autorotate speed="0.100" nodedelay="0.00" startloaded="0" returntohorizon="0.000" delay="8.00" noderandom="1"/>
+    <control simulatemass="1" lockedmouse="0" lockedkeyboard="0" dblclickfullscreen="0" invertwheel="0" lockedwheel="0" invertcontrol="1" speedwheel="1" sensitivity="8"/>
+  </panorama>
+</tour>

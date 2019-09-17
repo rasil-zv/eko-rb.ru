@@ -1,0 +1,25 @@
+
+
+/* Start:/bitrix/components/bitrix/system.pagenavigation/templates/modern/style.min.css?1568608924659*/
+div.modern-page-navigation{padding:.5em 0}div.modern-page-navigation a,span.modern-page-current,span.modern-page-dots{border-left-width:1px;border-left-style:solid;padding-left:.75em;padding-right:.5em;text-decoration:none}div.modern-page-navigation a.modern-page-previous{border-right-width:1px;border-right-style:solid;border-left:none}div.modern-page-navigation a.modern-page-first,div.modern-page-navigation span.modern-page-first{border-left:none;padding-left:.5em}span.modern-page-current{font-weight:bold}div.modern-page-navigation a,span.modern-page-current,div.modern-page-navigation a.modern-page-previous,span.modern-page-dots{border-color:#cdcdcd}
+/* End */
+
+
+/* Start:/bitrix/templates/clinic/components/bitrix/search.page/search_page/style.css?1568608925163*/
+a.search-page-params {
+	border-bottom: 1px dashed blue;
+	text-decoration: none;
+}
+div.search-page-params {
+	margin-top: 6px;
+}
+.search-item-rate {font-size: 11px;}
+/* End */
+
+
+/* Start:/bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?156860892351*/
+font.errortext{color:red}font.notetext{color:green}
+/* End */
+/* /bitrix/components/bitrix/system.pagenavigation/templates/modern/style.min.css?1568608924659 */
+/* /bitrix/templates/clinic/components/bitrix/search.page/search_page/style.css?1568608925163 */
+/* /bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?156860892351 */

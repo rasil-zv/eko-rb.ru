@@ -1,0 +1,4 @@
+config/*.key
+config/*.php
+config/cookie.txt
+.idea/

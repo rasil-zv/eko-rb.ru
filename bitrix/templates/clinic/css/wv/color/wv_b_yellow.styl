@@ -1,0 +1,470 @@
+$wv_color = #fff705;
+$wv_color_light = #fff705;
+$wv_background_color = #000;
+$wv_ll_color = #fff705;
+$main_size = 16px;
+$wv_service_color_grey = #fff705;
+
+.wv
+    background-color $wv_background_color
+    body
+        background-color $wv_background_color
+    *
+        color $wv_color !important
+    input[type="email"]
+    input[type="text"]
+    input[type="password"]
+    textarea
+        background-color $wv_background_color
+        border 1px solid $wv_color_light !important
+        font-size $main_size !important
+        &:not(textarea)
+            height 50px !important
+        &:focus
+            border 1px solid $wv_color !important
+        &::placeholder
+            color $wv_color_light !important
+    .wv_none
+        display none !important
+    .content
+        h2
+            font-size 24px !important
+        h3
+            font-size 20px !important
+        table
+            border 1px solid $wv_color_light
+            tr
+                background-color $wv_background_color !important
+                border-bottom 1px solid $wv_color_light
+                td
+                    border-right 1px solid $wv_color_light
+    .line
+        border-bottom 2px solid $wv_color
+        &.bb
+            border-bottom 2px solid $wv_color
+        &.grd
+            background $wv_background_color !important
+            color $wv_color
+        &.grey
+            background-color $wv_background_color
+        &.purple_dark
+            background-color $wv_background_color
+        &.last_line
+            border-bottom 0px
+        &.head_title_parent
+            padding 25px 0px
+            background none !important
+            &:before
+                content none
+            .breadcrumbs
+                margin-bottom 5px
+            h1
+                text-shadow none
+                font-size 32px !important
+
+    .header_top
+        padding 20px 0px
+    .header
+        .block
+            &.logo
+                img
+                    filter grayscale(100%)
+            &.contacts
+                margin-top 15px
+                padding 15px 0px 0px 0px
+                border-top 1px solid $wv_color
+                ul
+                    li
+                        display block
+                        margin-bottom 5px
+                        text-align right
+            &.search
+                form
+                    a
+                        border 1px solid $wv_color_light
+                        background-color $wv_background_color
+                        border-left 0px
+                        color $wv_color !important
+                        height 50px
+                        &:hover
+                            color $wv_background_color !important
+                            background-color $wv_ll_color
+            &.phone
+                .phone_number
+                    a
+                        font-size 34px !important
+                        color $wv_color !important
+    .nav_parent
+        border-bottom 2px solid $wv_color
+    .main_nav
+        >ul
+            >li
+                >a
+                    &:hover
+                        color $wv_background_color !important
+                        background-color $wv_ll_color
+                >ul
+                    background-color $wv_background_color
+                    >li
+                        >a
+                            color $wv_color !important
+                            &.active
+                                background-color #333
+                                color $wv_color
+                            &:hover
+                                background-color #333
+                                color $wv_color !important
+    .places_back
+        background none !important
+        border-bottom 2px solid $wv_color
+        &:before
+            content none
+    .places
+        padding 30px 0px
+        .nav
+            background-color $wv_background_color
+            border 1px solid $wv_color
+            ul
+                li
+                    border-color $wv_color !important
+    .places_banner
+        .title
+            font-size 32px !important
+            b
+                font-size 32px !important
+    .btn
+        box-shadow none
+        border 2px solid $wv_color
+        color $wv_color !important
+        background-color $wv_background_color
+        &:hover
+            transform none
+            background-color $wv_ll_color
+            color $wv_background_color !important
+    .index_contacts
+        padding 30px 0px
+        .left_block
+        .right_block
+            border-color $wv_color !important
+            &.title
+                font-size 26px !important
+                b
+                    font-size 26px !important
+    .doctors
+        .desc
+            .title
+                font-size 26px !important
+                b
+                    font-size 26px !important
+        .nav
+            ul
+                li
+                    border 1px solid $wv_color
+                    &.active
+                        background-color $wv_color
+        .list
+            .item
+                .picture
+                    .main
+                        border 1px solid $wv_color !important
+                .back
+                    border 1px solid $wv_color
+                    .name
+                        color $wv_background_color !important
+                        font-weight bold
+                        font-size 18px !important
+                    a
+                        color $wv_background_color !important
+                        &:hover
+                            text-decoration underline
+    .copyright
+        color $wv_color
+        font-size 28px !important
+    div.title-search-result
+        border 0px !important
+    .map
+        *
+            font-size 11px !important
+            color #000 !important
+    .times_page
+        table
+            tr
+                &:first-of-type
+                    border-bottom 1px solid $wv_color_light !important
+                td
+                    background-color $wv_background_color !important
+                    font-weight normal !important
+                    color $wv_color !important
+                    border-right 1px solid $wv_color_light !important
+                    &:nth-child(1)
+                        font-style normal
+                &.section
+                    td
+                        font-weight bold !important
+    .cons
+        background-color $wv_background_color
+        padding 25px
+        border 2px solid $wv_color
+        color $wv_color
+        .column
+            &.arrow
+                i
+                    font-size 44px !important
+    .to_doctor
+        background-color $wv_background_color
+        padding 25px
+        border 2px solid $wv_color
+        align-items: flex-end
+        .column
+            padding 15px !important
+            p
+                text-align left
+            &.button
+                .btn
+                    height 50px
+        .line
+            border 0px !important
+    .to_doctor_title
+        padding-bottom 0px !important
+        &:after
+            content none
+    .back_to_list a
+        padding 10px 15px
+        background-color $wv_background_color
+        color $wv_color
+        border 2px solid $wv_color
+        &:hover
+            background-color $wv_ll_color
+            opacity 1
+    .sections_list
+        .item
+            .title
+                background-color $wv_background_color
+                border 2px solid $wv_color
+    .section_list
+        .item
+            .title
+                color $wv_service_color_grey !important
+    .service_detail
+        .style_list
+            ul
+                li
+                    &:before
+                        color $wv_color
+    .prices_list
+        .desc
+            font-style normal
+        .item
+            .title
+                background-color $wv_background_color !important
+                border-color $wv_color_light
+                color $wv_color !important
+                &:after
+                    color $wv_color
+            table
+                border 1px solid $wv_color_light
+                border-top 0px
+                tr
+                    &.added
+                        td
+                            color $wv_background_color !important
+                    th
+                        padding 10px 15px
+                        background-color $wv_background_color
+                    td
+                        border-color $wv_color_light
+                        &.desc
+                            i
+                                color $wv_background_color !important
+                        a
+                            .desc
+                                left -72px
+                                background-color $wv_background_color
+                                border 1px solid $wv_color
+                                &:before
+                                    border-color $wv_color transparent transparent transparent
+                            &.pl_delete
+                                i
+                                    color $wv_background_color !important
+    .price_cart_button
+        .count
+            background-color $wv_background_color
+            border 5px solid $wv_color
+            font-size 44px !important
+        .cart
+            background-color $wv_color
+            i
+                color $wv_background_color !important
+    .content_title
+        padding-bottom 0px !important
+        margin-bottom 10px !important
+        &:before
+            content none
+    .price_overlay
+        .price_list_cart
+            width 700px
+            left calc(50% - 350px)
+            border-bottom 0px
+            &:before
+                border-color transparent $wv_color transparent transparent
+            .foot
+                a
+                    background-color $wv_background_color
+                    border 2px solid $wv_color
+                    padding 10px 15px
+                    font-weight bold
+                    &:hover
+                        background-color $wv_ll_color
+        .close
+            i
+                color $wv_background_color !important
+                font-size 22px !important
+        .form
+            .submit
+                input
+                    background-color $wv_background_color
+                    border 2px solid $wv_color
+                    padding 10px 15px
+                    font-weight bold
+                    &:hover
+                        background-color $wv_ll_color
+    .overlay
+        .footer_form
+            background-color $wv_background_color
+            border-bottom 0px
+            &:before
+                border-color transparent $wv_color transparent transparent
+        .close
+            i
+                color $wv_background_color !important
+                font-size 22px !important
+    .reviews_page_title
+        margin-bottom 0px !important
+        &:after
+            content none
+    .reviews_page
+        .list
+            .item
+                border 2px solid $wv_color
+                background-color $wv_background_color
+                .desc
+                    background-color $wv_background_color
+                    border-top 1px solid $wv_color
+                    font-style normal
+    .questions_title
+        margin-bottom 0px !important
+        &:after
+            content none
+    .questions
+        .list
+            .item
+                margin-bottom 50px
+                border 2px solid $wv_color
+                background-color $wv_background_color
+                .head
+                    background-color $wv_background_color
+                    border-bottom 1px solid $wv_color
+                    padding 10px 15px
+                    font-style normal
+                .title
+                    .button
+                        &:before
+                            color $wv_color
+                .desc
+                    border-top 1px solid $wv_color
+                    font-style normal
+                    background-color $wv_ll_color
+    .header_top
+        justify-content: space-between
+        .wv_change
+            display flex
+            align-items: center
+        .wv_c_item
+            margin-right 50px
+            display flex
+            align-items: center
+            .title
+                margin-right 10px
+                font-size 18px !important
+            a
+                margin-left 0px
+                display inline-block
+                &:last-of-type
+                    margin-right 0px
+            &:last-of-type
+                margin-right 0px
+            &.wv_color
+                a
+                    padding 5px 10px
+                    font-size 22px !important
+                    margin-right 10px
+                    border 1px solid transparent
+                    &.white
+                        border-color #999
+                        background-color white !important
+                        color #000 !important
+                    &.black
+                        border-color white
+                        background-color #000 !important
+                        color white !important
+                    &.b_yellow
+                        border-color white
+                        background-color #000 !important
+                        color #FFF705 !important
+                    &.blue
+                        border 1px solid #999
+                        background-color #9FD7FF !important
+                        color #143c5a !important
+                    &.active
+                        border 3px solid rgb(255, 255, 0)
+            &.wv_font_size
+                a
+                    margin-right 10px
+                    padding 5px
+                    &.font_16
+                        font-size 16px !important
+                    &.font_20
+                        font-size 20px !important
+                    &.font_24
+                        font-size 24px !important
+                    &.active
+                        border 3px solid rgb(255,255,0)
+            &.wv_font_kerning
+                a
+                    margin-right 5px
+                    padding 5px
+                    font-size 18px !important
+                    &.active
+                        border 3px solid rgb(255, 255, 0)
+    .article_detail
+        .date
+            margin-bottom 0px
+    .workers_list
+        .item
+            .title
+                font-size: 24px !important
+                a
+                    font-size: 24px !important
+            .desc
+                background-color $wv_background_color
+                color $wv_color !important
+                padding 0px
+            .times
+                .main
+                    .list
+                        table
+                            td.section
+                                background-color $wv_background_color
+                    .icon
+                        background-color $wv_color
+                        i
+                            color $wv_background_color !important
+    .questions
+        .list
+            .item
+                .title
+                    background-color $wv_background_color
+                .desc
+                    background-color $wv_background_color
+.datepicker
+    background-color $wv_background_color

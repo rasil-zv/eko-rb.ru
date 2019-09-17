@@ -1,0 +1,301 @@
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+    php_flag session.use_trans_sid off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+    Redirect 301 /uslugi/intimnaya_plastika/ /uslugi/ginekologiya/bezoperatsionnaya-intimnaya-plastika-dlya-korrektsii-tkanei-polovykh-organov-u-zhenshchin/
+    Redirect 301 /uslugi/konsultatsiya-akushera-ginekologa/ /uslugi/ginekologiya/konsultatsiya-akushera-ginekologa/
+    Redirect 301 /stati/konsultaciya-vracha-ginekologa/ /uslugi/ginekologiya/konsultatsiya-ginekologa-dlya-podbora-metoda-kontratseptsii/
+    Redirect 301 /stati/konsultaciya-vracha-ginekologa-endokrinologa/ /uslugi/ginekologiya/konsultatsiya-ginekologa-endokrinologa-/
+    Redirect 301 /uslugi/ginekolog/ /uslugi/ginekologiya/konsultatsiya-ginekologa-khirurga/
+    Redirect 301 /novosti/vot-eto-novost-plazmolifting/ /uslugi/ginekologiya/plazmolifting-v-ginekologii/
+    Redirect 301 /uslugi/lechenie_erozii_sheyki_matki/ /uslugi/ginekologiya/radiovolnovaya-terapiya-dlya-lecheniya-shei-ki-matki-i-udaleniya-novoobrazovanii/
+    Redirect 301 /uslugi/akusherstvo/ /uslugi/ginekologiya/ustanovka-akusherskogo-pessariya/
+    Redirect 301 /uslugi/uzi_organov_malogo_taza/ /uslugi/ginekologiya/uzi-v-ginekologii/
+    Redirect 301 /uslugi/laparoskopiya-i-eko/ /uslugi/ginekologiya/vnutrimatochnaya-spiral/
+    Redirect 301 /uslugi/ustanovkaudalenie-podkozhnogo-kontratseptiva-implanon/ /uslugi/ginekologiya/vvedenie-kontratseptiva-implanon/
+    Redirect 301 /endokrinologiya/ /uslugi/endokrinologiya/
+    Redirect 301 /genetika/ /uslugi/genetika/
+    Redirect 301 /ginekologiya/ /uslugi/ginekolog/
+    Redirect 301 /mammologiya/ /uslugi/mammologiya/
+    Redirect 301 /pravila/2088/ /uslugi/pravila-gospitalizatsii/
+    Redirect 301 /stati/lechenie-besplodiya/ /uslugi/diagnostika-prichiny-besplodiya/
+    Redirect 301 /stati/planirovanie-beremennosti/ /uslugi/planirovanie-beremennosti/
+    Redirect 301 /stati/podgotovka-k-obsledovaniyam-/ /uslugi/pravila-podgotovki-k-diagnosticheskim-obsledovaniyam/
+    Redirect 301 /terapiya/ /uslugi/terapiya/
+    Redirect 301 /urologiya_andrologiya/ /uslugi/urologiya/
+    Redirect 301 /uslugi/akusherstvo/ /uslugi/nablyudenie-beremennosti/
+    Redirect 301 /uslugi/eko-po-polisu-oms-po-programme-gosudarstvennih-garantiy/ /uslugi/eko-po-oms/
+    Redirect 301 /uslugi/endokrinolog/ /uslugi/endokrinologiya/konsultatsiya-endokrinologa/
+    Redirect 301 /uslugi/geneticheskie-issledovaniya_1/ /uslugi/analizy/geneticheskie-issledovaniya/
+    Redirect 301 /uslugi/katalog_donorov_spermi_g_ufa/ /uslugi/katalog_donorov_spermi_g_ufa
+    Redirect 301 /uslugi/konsultatsiya-gastroenterologa/ /uslugi/gastroenterologiya/
+    Redirect 301 /uslugi/konsultatsiya-ginekologa-endokrinologa/ /uslugi/endokrinologiya/konsultatsiya-endokrinologa-vo-vremya-beremennosti/
+    Redirect 301 /uslugi/konsultatsiya-kardiologa/ /uslugi/kardiologiya/ekhokardiografiya/
+    Redirect 301 /uslugi/konsultatsiya-proktologa-1/ /uslugi/proktologiya/
+    Redirect 301 /uslugi/laboratornie_analizi/ /uslugi/analizy/
+    Redirect 301 /uslugi/mammolog/ /uslugi/mammologiya/konsultatsiya-mammologa/
+    Redirect 301 /uslugi/meditsina-ploda_1/ /uslugi/meditsina-ploda/
+    Redirect 301 /uslugi/operativnoe_lechenie_i_diagnostika/ /uslugi/operativnaya-ginekologiya/
+    Redirect 301 /uslugi/pomoshch-v-vibore-uslugi-ili-spetsialista1/ /uslugi/informatsiya-o-vidakh-meditsinskoy-pomoshchi/
+    Redirect 301 /uslugi/programmi-dlya-predpriyatiya/ /uslugi/meditsinskie-uslugi-dlya-predpriyatiy/
+    Redirect 301 /uslugi/uzi_bryushnoy_polosti/ /uslugi/ultrazvukovye-issledovaniya/uzi-bryushnoi-polosti/
+    Redirect 301 /uslugi/uzi_molochnih_zhelez/ /uslugi/mammologiya/uzi-ili-mammografiya-molochnoi-zhelezy/
+    Redirect 301 /uslugi/uzi_shchitovidnoy_zhelezi/ /uslugi/ultrazvukovye-issledovaniya/uzi-shchitovidnoi-zhelezy-i-limfaticheskikh-uzlov/
+    Redirect 301 /uslugi/uzi_sosudov/ /uslugi/ultrazvukovye-issledovaniya/uzi-sosudov-shei/
+    Redirect 301 /uslugi/uzi/ /uslugi/ultrazvukovye-issledovaniya/
+    Redirect 301 /uslugi/vspomogatelnie_reproduktivnie_tehnologii/ /uslugi/lechenie-besplodiya/
+    Redirect 301 /zapis_na_priem /uslugi/pravila-predostavleniya-platnykh-uslug/
+    Redirect 301 /stati/gestatsionniy-diabet-u-beremennih/ /stati/gestatsionnyy-diabet-u-beremennykh/
+    Redirect 301 /stati/povishennoe-arterialnoe-davlenie-u-beremennih/ /stati/povyshennoe-arterialnoe-davlenie-u-beremennykh/
+    Redirect 301 /stati/na-kakih-srokah-delayut-planovie-uzi-pri-beremennosti/ /stati/na-kakikh-srokakh-delayut-planovye-uzi-pri-beremennosti/
+    Redirect 301 /stati/uzi-rebenku/ /stati/detskoe-uzi/
+    Redirect 301 /stati/patologiya-shchitovidnoy-zhelezi/ /stati/patologiya-shchitovidnoy-zhelezy/
+    Redirect 301 /stati/sovremennie-metodi-lecheniya-diabeta-pompovaya-insulinoterapiya/ /stati/sovremennye-metody-lecheniya-diabeta-pompovaya-insulinoterapiya/
+    Redirect 301 /stati/gestatsionniy-saharniy-diabet/ /stati/gestatsionnyy-sakharnyy-diabet/
+    Redirect 301 /stati/endokrinologiya-diabet1/ /stati/endokrinologiya-diabet/
+    Redirect 301 /stati/kak-borotsya-s-pervimi-simptomami-klimaksa-u-zhenshchin/ /stati/kak-borotsya-s-pervymi-simptomami-klimaksa-u-zhenshchin/
+    Redirect 301 /stati/kak-izbezhat-muzhskih-bolezney/ /stati/kak-izbezhat-muzhskikh-bolezney/
+    Redirect 301 /stati/skype-konsultatsiya1/ /stati/skype-konsultatsiya/
+    Redirect 301 /stati/profilakticheskiy-osmotr-ginekologa--eto-vazhno/ /stati/profilakticheskiy-osmotr-ginekologa-eto-vazhno/
+    Redirect 301 /stati/kak-sohranit-zhenskoe-zdorove-na-dolgie-godi/ /stati/kak-sokhranit-zhenskoe-zdorove-na-dolgie-gody/
+    Redirect 301 /stati/sdelayte-mne-krasivo-/ /stati/sdelayte-mne-krasivo/
+    Redirect 301 /stati/privichnoe-nevinashivanie-beremennosti/ /stati/privychnoe-nevynashivanie-beremennosti/
+    Redirect 301 /stati/eko---nastraivaemsya-na-rezultat-/ /stati/eko-nastraivaemsya-na-rezultat/
+    Redirect 301 /stati/podgotovka-k-obsledovaniyam-/ /stati/podgotovka-k-obsledovaniyam/
+    Redirect 301 /stati/programma-zdorove-zhenshchini-401/ /novosti/programma-quot-zdorove-zhenshchiny-40-quot/
+    Redirect 301 /stati/programma-gosudarstvennih-garantiy/ /stati/programma-gosudarstvennykh-garantiy/
+    Redirect 301 /stati/ostrokonechnie-kondilomi-u-zhenshchin-virus-papilomi-cheloveka/ /stati/ostrokonechnye-kondilomy-u-zhenshchin-virus-papillomy-cheloveka/
+    Redirect 301 /stati/centr-planirovaniya-semi-i-reprodukcii/ /stati/tsentr-planirovaniya-semi-i-reproduktsii/
+    Redirect 301 /stati/udalenie-miomi-matki-stoimost/ /stati/udalenie-miomy-matki-stoimost/
+    Redirect 301 /stati/udalenie-miomi-matki/ /stati/udalenie-miomy-matki/
+    Redirect 301 /stati/uzi-prostati/ /stati/uzi-prostaty/
+    Redirect 301 /stati/kak-proverit-prohodimost-trub/ /stati/kak-proverit-prokhodimost-trub/
+    Redirect 301 /stati/kak-lechit-nederzhanie-mochi-u-jenshchin/ /stati/kak-lechit-nederzhanie-mochi-u-zhenshchin/
+    Redirect 301 /stati/kak-vibrat-protivozachatochnoe-sredstvo/ /stati/kak-vybrat-protivozachatochnoe-sredstvo/
+    Redirect 301 /stati/gde-prijech-eroziyu/ /stati/gde-prizhech-eroziyu/
+    Redirect 301 /stati/umenshit-polovie-gubi/ /stati/umenshit-polovye-guby/
+    Redirect 301 /stati/plastika-rodovih-razrivov/ /stati/plastika-rodovykh-razryvov/
+    Redirect 301 /stati/laboratornie-analizi-v-ufe/ /stati/laboratornye-analizy-v-ufe/
+    Redirect 301 /stati/uzi-centr-v-ufe/ /stati/uzi-tsentr-v-ufe/
+    Redirect 301 /stati/bolnici-urologii/ /stati/bolnitsy-urologii/
+    Redirect 301 /stati/endokrinologiya1/ /stati/endokrinologiya/
+    Redirect 301 /stati/eko-centr-v-ufe/ /stati/eko-tsentr-v-ufe/
+    Redirect 301 /stati/eko-stoit/ /stati/eko-skolko-stoit/
+    Redirect 301 /stati/metodi-lecheniya-besplodiya/ /stati/metody-lecheniya-besplodiya/
+    Redirect 301 /stati/kakie-gormoni-sdat-pri-besplodii/ /stati/kakie-gormony-sdat-pri-besplodii/
+    Redirect 301 /stati/pomosh-pri-besplodii/ /stati/pomoshch-pri-besplodii/
+    Redirect 301 /stati/besplodie-prichini-lechenie/ /stati/besplodie-prichiny-lechenie/
+    Redirect 301 /stati/faktori-besplodiya/ /stati/faktory-besplodiya/
+    Redirect 301 /stati/centri-lecheniya-besplodiya/ /stati/tsentry-lecheniya-besplodiya/
+    Redirect 301 /stati/medicina-mujskoe-besplodie/ /stati/meditsina-muzhskoe-besplodie/
+    Redirect 301 /stati/jenskoe-i-mujskoe-besplodie/ /stati/zhenskoe-i-muzhskoe-besplodie/
+    Redirect 301 /stati/bank-spermi-onlayn/ /stati/bank-spermy-onlayn/
+    Redirect 301 /stati/gde-nahoditsya-bank-spermi/ /stati/gde-nakhoditsya-bank-spermy/
+    Redirect 301 /stati/bank-donorskoy-spermi/ /stati/bank-donorskoy-spermy/
+    Redirect 301 /stati/adresa-bankov-spermi/ /stati/adresa-bankov-spermy/
+    Redirect 301 /stati/gde-sdelat-hirurgicheskuyu-defloraciyu/ /stati/gde-sdelat-khirurgicheskuyu-defloratsiyu/
+    Redirect 301 /stati/laparoskopiya-kisti-yaichnika/ /stati/laparoskopiya-kisty-yaichnika/
+    Redirect 301 /stati/centr-akusherstva/ /stati/tsentr-akusherstva/
+    Redirect 301 /stati/skolko-stoit-uzi-shitovidnoy-jelezi/ /stati/skolko-stoit-uzi-shchitovidnoy-zhelezy/
+    Redirect 301 /stati/uzi-shitovidnoy-jelezi/ /stati/uzi-shchitovidnoy-zhelezy/
+    Redirect 301 /stati/uzi-pochek-i-mochevogo-puzirya/ /stati/uzi-pochek-i-mochevogo-puzyrya/
+    Redirect 301 /stati/konsultaciya-vracha-ginekologa-endokrinologa/ /stati/konsultatsiya-vracha-ginekologa-endokrinologa/
+    Redirect 301 /stati/skolko-stoit-konsultaciya-ginekologa/ /stati/skolko-stoit-konsultatsiya-ginekologa/
+    Redirect 301 /stati/obrezanie-chlena-mujchin/ /stati/obrezanie-chlena-u-muzhchin/
+    Redirect 301 /stati/medikamentozniy-abort-otzivi/ /stati/medikamentoznyy-abort-otzyvy/
+    Redirect 301 /stati/operaciya-udalenie-kisti/ /stati/operatsiya-udalenie-kisty/
+    Redirect 301 /stati/udalenie-kisti-vlagalisha/ /stati/udalenie-kisty-vlagalishcha/
+    Redirect 301 /stati/operaciya-ekstirpaciya-matki/ /stati/operatsiya-ekstirpatsiya-matki/
+    Redirect 301 /stati/ekstirpaciya-matki-bez-pridatkov/ /stati/ekstirpatsiya-matki-bez-pridatkov/
+    Redirect 301 /stati/amputaciya-matki-bez-pridatkov/ /stati/amputatsiya-matki-bez-pridatkov/
+    Redirect 301 /stati/sterilizaciya-jenshchini-stoimost/ /stati/sterilizatsiya-zhenshchiny-stoimost/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-stoimost/ /stati/laparoskopicheskaya-operatsiya-stoimost/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-ginekologiya/ /stati/laparoskopicheskaya-operatsiya-ginekologiya/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-cena/ /stati/laparoskopicheskaya-operatsiya-tsena/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-skolko-stoit/ /stati/laparoskopicheskaya-operatsiya-skolko-stoit/
+    Redirect 301 /stati/donor-spermi-cena/ /stati/donor-spermy-tsena/
+    Redirect 301 /stati/donor-spermi-stoimost/ /stati/donor-spermy-stoimost/
+    Redirect 301 /stati/trebuyutsya-donori-spermi/ /stati/trebuyutsya-donory-spermy/
+    Redirect 301 /stati/sayt-donorov-spermi/ /stati/sayt-donorov-spermy/
+    Redirect 301 /stati/iskusstvennaya-inseminaciya-spermoy-donora/ /stati/iskusstvennaya-inseminatsiya-spermoy-donora/
+    Redirect 301 /stati/osnovi-embriologii/ /stati/osnovy-embriologii/
+    Redirect 301 /stati/oplodotvorenie-yaycekletki/ /stati/oplodotvorenie-yaytsekletki/
+    Redirect 301 /stati/stimulyaciya-monoovulyacii/ /stati/stimulyatsiya-monoovulyatsii/
+    Redirect 301 /stati/citologiya-gistologiya-embriologiya/ /stati/tsitologiya-gistologiya-embriologiya/
+    Redirect 301 /stati/citologiya-embriologiya/ /stati/tsitologiya-embriologiya/
+    Redirect 301 /stati/surrogatnoe-materinstvo-cena/ /stati/surrogatnoe-materinstvo-tsena/
+    Redirect 301 /stati/konsultaciya-urologa/ /stati/konsultatsiya-urologa/
+    Redirect 301 /stati/uzi-pochek-cena/ /stati/uzi-pochek-tsena/
+    Redirect 301 /stati/urologiya-operaciya/ /stati/urologiya-operatsiya/
+    Redirect 301 /stati/medicina-urologiya/ /stati/meditsina-urologiya/
+    Redirect 301 /stati/urologiya-ceni/ /stati/urologiya-tseny/
+    Redirect 301 /stati/centri-mammologii/ /stati/tsentry-mammologii/
+    Redirect 301 /stati/konsultaciya-genetika-cena/ /stati/konsultatsiya-genetika-tsena/
+    Redirect 301 /stati/konsultaciya-genetika-pri-beremennosti/ /stati/konsultatsiya-genetika-pri-beremennosti/
+    Redirect 301 /stati/akusherstvo1/ /stati/akusherstvo-v-sovremennoy-ginekologii/
+    Redirect 301 /stati/konsultaciya-akushera-ginekologa/ /stati/konsultatsiya-akushera-ginekologa/
+    Redirect 301 /stati/konsultaciya-vracha-ginekologa-endokrinologa/ /stati/konsultatsiya-vracha-ginekologa-endokrinologa/
+    Redirect 301 /stati/sterilizaciya-stoimost/ /stati/sterilizatsiya-stoimost/
+    Redirect 301 /stati/sterilizaciya-ceni/ /stati/sterilizatsiya-tseny/
+    Redirect 301 /stati/udalenie-miomatoznih-uzlov/ /stati/udalenie-miomatoznykh-uzlov/
+    Redirect 301 /stati/operaciya-udalenie-polipov/ /stati/operatsiya-udalenie-polipov/
+    Redirect 301 /stati/bank-spermi-ufa/ /stati/bank-spermy-ufa/
+    Redirect 301 /stati/bank-spermi/ /stati/bank-spermy/
+    Redirect 301 /stati/bank-donorov-spermi/ /stati/bank-donorov-spermy/
+    Redirect 301 /stati/ishu-donora-spermi/ /stati/ishchu-donora-spermy/
+    Redirect 301 /stati/donor-spermi-ufa/ /stati/donor-spermy-ufa/
+    Redirect 301 /stati/cena-eko/ /stati/tsena-eko/
+    Redirect 301 /stati/sdat-analizi-spermi/ /stati/sdat-analizy-spermy/
+    Redirect 301 /stati/eko-v-ufe/ /stati/eko-v-g-ufe/
+    Redirect 301 /stati/centr-eko/ /stati/tsentr-eko/
+    Redirect 301 /stati/centr-surrogatnogo-materinstva/ /stati/tsentr-surrogatnogo-materinstva/
+    Redirect 301 /stati/analizi-pri-besplodii/ /stati/analizy-pri-besplodii/
+    Redirect 301 /stati/centri-po-besplodiyu/ /stati/tsentry-po-besplodiyu/
+    Redirect 301 /stati/preparati-dlya-lecheniya-mujskogo-besplodiya/ /stati/preparaty-dlya-lecheniya-muzhskogo-besplodiya/
+    Redirect 301 /stati/laboratornie-analizi-stoimost/ /stati/laboratornye-analizy-stoimost/
+    Redirect 301 /stati/uzi-limfaticheskih-uzlov/ /stati/uzi-limfaticheskikh-uzlov/
+    Redirect 301 /stati/uzi-molochnih-jelez-cena/ /stati/uzi-molochnykh-zhelez-tsena/
+    Redirect 301 /stati/uzi-pochek-i-mochevogo-puzirya1/ /stati/uzi-pochek-i-mochevogo-puzyrya/
+    Redirect 301 /stati/uzi-bryushnoy-polosti-cena/ /stati/uzi-bryushnoy-polosti-tsena/
+    Redirect 301 /stati/punkcionnaya-biopsiya-molochnoy-jelezi/ /stati/punktsionnaya-biopsiya-molochnoy-zhelezy/
+    Redirect 301 /stati/centri-endokrinologii/ /stati/tsentry-endokrinologii/
+    Redirect 301 /stati/endokrinologiya-gormoni/ /stati/endokrinologiya-gormony/
+    Redirect 301 /stati/endokrinologiya-saharniy-diabet/ /stati/endokrinologiya-sakharnyy-diabet/
+    Redirect 301 /stati/konsultaciya-vracha-endokrinologa/ /stati/konsultatsiya-vracha-endokrinologa/
+    Redirect 301 /stati/centr-akusherstva-i-ginekologii/ /stati/tsentr-akusherstva-i-ginekologii/
+    Redirect 301 /stati/jenskaya-konsultaciya-ginekologa/ /stati/zhenskaya-konsultatsiya-ginekologa/
+    Redirect 301 /stati/konsultaciya-vracha-ginekologa/ /stati/konsultatsiya-vracha-ginekologa/
+    Redirect 301 /stati/konsultaciya-ginekologa/ /stati/konsultatsiya-ginekologa/?sphrase_id=39
+    Redirect 301 /stati/medikamentozniy-abort-ufa/ /stati/medikamentoznyy-abort-ufa/
+    Redirect 301 /stati/abort-bolnici/ /stati/abort-bolnitsy/
+    Redirect 301 /stati/abort-cena/ /stati/abort-tsena/
+    Redirect 301 /stati/plastika-vlagalisha-ceni/ /stati/plastika-vlagalishcha-tseny/
+    Redirect 301 /stati/udalenie-kisti-cena/ /stati/udalenie-kisty-tsena/
+    Redirect 301 /stati/udalenie-kisti-yaichnika-ceni/ /stati/udalenie-kisty-yaichnika-tseny/
+    Redirect 301 /stati/operaciya-udalenie-kisti-yaichnika/ /stati/operatsiya-udalenie-kisty-yaichnika/
+    Redirect 301 /stati/udalenie-kisti-sheyki-matki/ /stati/udalenie-kisty-sheyki-matki/
+    Redirect 301 /stati/medicinskiy-centr-urologii/ /stati/meditsinskiy-tsentr-urologii/
+    Redirect 301 /stati/centr-urologii/ /stati/tsentr-urologii/
+    Redirect 301 /stati/inseminaciya-spermoy-donora/ /stati/inseminatsiya-spermoy-donora/
+    Redirect 301 /stati/konsultaciya-anesteziologa/ /stati/konsultatsiya-anesteziologa/
+    Redirect 301 /stati/konsultacii-ginekologa-v-ufe/ /stati/konsultatsii-ginekologa-v-ufe/
+    Redirect 301 /stati/vedenie-beremennosti-ufa/ /stati/vedenie-beremennosti-g-ufa/
+    Redirect 301 /stati/jenskie-bolezni-ginekologiya/ /stati/zhenskie-bolezni-ginekologiya/
+    Redirect 301 /stati/ginekologiya-ceni/ /stati/ginekologiya-tseny/
+    Redirect 301 /stati/centr-ginekologii/ /stati/tsentr-ginekologii/
+    Redirect 301 /stati/bolnici-ginekologii/ /stati/bolnitsy-ginekologii/
+    Redirect 301 /stati/ginekologiya-ufa/ /stati/ginekologiya-g-ufa/
+    Redirect 301 /stati/ginekologiya1/ /stati/ginekologiya/?sphrase_id=41
+    Redirect 301 /stati/bank-donorskoy-spermi/ /stati/bank-donorskoy-spermy/
+    Redirect 301 /stati/lechenie-besplodiya/ /stati/diagnostika-i-lechenie-besplodiya/
+    Redirect 301 /stati/medicina-besplodie/ /stati/meditsina-besplodie/
+    Redirect 301 /stati/konsultacii-ginekologa-endokrinologa/ /stati/konsultatsii-ginekologa-endokrinologa/
+    Redirect 301 /stati/abort/ /stati/abort/?sphrase_id=42
+    Redirect 301 /stati/kak-vilechit-besplodie/ /stati/kak-vylechit-besplodie/
+    Redirect 301 /stati/plastika-malih-polovih-gub/ /stati/plastika-malykh-polovykh-gub/
+    Redirect 301 /stati/ekstirpaciya-matki/ /stati/ekstirpatsiya-matki/
+    Redirect 301 /stati/oslojneniya-laparoskopicheskih-operaciy/ /stati/oslozhneniya-laparoskopicheskikh-operatsiy/
+    Redirect 301 /stati/besplodie-u-mujchin/ /stati/besplodie-u-muzhchin/
+    Redirect 301 /stati/besplodie-u-jenshin/ /stati/besplodie-u-zhenshchin/
+    Redirect 301 /stati/uzi-molochnih-jelez/ /stati/uzi-molochnykh-zhelez/
+    Redirect 301 /stati/uzi-bryushnoy-polosti/ /stati/uzi-bryushnoy-polosti/?sphrase_id=43
+    Redirect 301 /stati/lechenie-jenskih-zabolevaniy/ /stati/lechenie-zhenskikh-zabolevaniy/
+    Redirect 301 /stati/laparoskopiya-kisti/ /stati/laparoskopiya-kisty/
+    Redirect 301 /stati/laparoskopiya-matochnih-trub/ /stati/laparoskopiya-matochnykh-trub/
+    Redirect 301 /stati/laporoskopii-v-ufe/ /stati/laparoskopii-v-ufe/
+    Redirect 301 /stati/cirkumciziya/ /stati/tsirkumtsiziya/
+    Redirect 301 /stati/mochevoy-puzir-uzi/ /stati/mochevoy-puzyr-uzi/
+    Redirect 301 /stati/uzi-sosudov-shei-i-golovi/ /stati/uzi-sosudov-shei-i-golovy/
+    Redirect 301 /stati/besplodie-prichini/ /stati/besplodie-prichiny/
+    Redirect 301 /stati/ginekologicheskiy-massaj/ /stati/ginekologicheskiy-massazh/
+    Redirect 301 /stati/diagnostika-saharnogo-diabeta/ /stati/diagnostika-sakharnogo-diabeta/
+    Redirect 301 /stati/nujen-donor-spermi/ /stati/nuzhen-donor-spermy/
+    Redirect 301 /stati/centr-lecheniya-besplodiya/ /stati/tsentr-lecheniya-besplodiya/
+    Redirect 301 /stati/funkcionalnoe-besplodie/ /stati/funktsionalnoe-besplodie/
+    Redirect 301 /stati/biopsiya-molochnoy-jelezi/ /stati/biopsiya-molochnoy-zhelezy/
+    Redirect 301 /stati/konsultaciya-genetika/ /uslugi/genetika/konsultatsiya-genetika/
+    Redirect 301 /stati/laparskopiya-matki/ /stati/laparoskopiya-matki/
+    Redirect 301 /stati/plastika-polovih-gub/ /stati/plastika-polovykh-gub/
+    Redirect 301 /stati/udalenie-kisti-matki/ /stati/udalenie-kisty-matki/
+    Redirect 301 /stati/sterilizaciya-jenshchin/ /stati/sterilizatsiya-zhenshchin/
+    Redirect 301 /stati/sterilizaciya-mujchin/ /stati/sterilizatsiya-muzhchin/
+    Redirect 301 /stati/donor-spermi/ /stati/donor-spermy/
+    Redirect 301 /stati/klinika-mujskogo-besplodiya/ /stati/klinika-muzhskogo-besplodiya/
+    Redirect 301 /stati/mujskoe-besplodie-eko/ /stati/muzhskoe-besplodie-eko/
+    Redirect 301 /stati/mujskoy-faktor-besplodiya/ /stati/muzhskoy-faktor-besplodiya/
+    Redirect 301 /stati/perenos_embrionov/ /stati/preimushchestva-i-nedostatki-perenosa-embrionov-na-5-sutki-razvitiya/
+    Redirect 301 /stati/hirurgicheskaya-defloraciya-v-ufe/ /stati/khirurgicheskaya-defloratsiya-v-ufe/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-v-ufe/ /stati/laparoskopicheskaya-operatsiya-v-ufe/
+    Redirect 301 /stati/amputaciya-matki-v-ufe/ /stati/amputatsiya-matki-v-ufe/
+    Redirect 301 /stati/udalenie-kisti-v-ufe/ /stati/udalenie-kisty-v-ufe/
+    Redirect 301 /stati/otsenka_kachestva_zigotembrionov_/ /stati/otsenka-kachestva-zigot-embrionov/
+    Redirect 301 /stati/intimnaya-plastika-ufa/ /stati/intimnaya-plastika-v-ufe/
+    Redirect 301 /stati/sterilizaciya-matochnih-trub-ufa/ /stati/sterilizatsiya-matochnykh-trub-v-ufe/
+    Redirect 301 /stati/vzyatie-mazka-u-mujchin/ /stati/vzyatie-mazka-u-muzhchin/
+    Redirect 301 /stati/vzyatie-mazka-u-jenshchin/ /stati/vzyatie-mazka-u-zhenshchin/
+    Redirect 301 /stati/abort-na-rannih-srokah/ /stati/abort-na-rannikh-srokakh/
+    Redirect 301 /stati/cistoskopiya/ /stati/tsistoskopiya/
+    Redirect 301 /stati/medikamentozniy-abort/ /stati/medikamentoznyy-abort/
+    Redirect 301 /stati/punkciya-kisti/ /stati/punktsiya-kisty/
+    Redirect 301 /stati/operaciya-amputaciya-matki/ /stati/operatsiya-amputatsiya-matki/
+    Redirect 301 /stati/laparoskopicheskaya-operaciya-yaichnikov/ /stati/laparoskopicheskaya-operatsiya-yaichnikov/
+    Redirect 301 /stati/surrogatnoe-materinstvo/ /stati/surrogatnoe-materinstvo/?sphrase_id=45
+    Redirect 301 /stati/lechitsya-mujskoe-besplodie/ /stati/lechitsya-li-muzhskoe-besplodie/
+    Redirect 301 /stati/priznaki-mujskogo-besplodiya/ /stati/priznaki-muzhskogo-besplodiya/
+    Redirect 301 /stati/vtorichnoe-mujskoe-besplodie/ /stati/vtorichnoe-muzhskoe-besplodie/
+    Redirect 301 /stati/prichini-mujskogo-besplodiya/ /stati/prichiny-muzhskogo-besplodiya/
+    Redirect 301 /stati/lechenie-mujskogo-besplodiya/ /stati/lechenie-muzhskogo-besplodiya/
+    Redirect 301 /stati/plastika-promejnosti/ /stati/plastika-promezhnosti/
+    Redirect 301 /stati/ablaciya/ /stati/ablatsiya/
+    Redirect 301 /stati/mujskoe-besplodie/ /stati/muzhskoe-besplodie/?sphrase_id=46
+    Redirect 301 /stati/lechenie-jenskogo-mujskogo-besplodiya/ /stati/lechenie-zhenskogo-i-muzhskogo-besplodiya/
+    Redirect 301 /stati/prichini-jenskogo-besplodiya/ /stati/prichiny-zhenskogo-besplodiya/
+    Redirect 301 /stati/lechenie-jenskogo-besplodiya/ /stati/lechenie-zhenskogo-besplodiya/
+    Redirect 301 /stati/jenskoe-besplodie/ /stati/zhenskoe-besplodie/
+    Redirect 301 /stati/donorstvo_spermi/ /stati/donorstvo-spermy/
+    Redirect 301 /stati/kogda_nuzhno_obratitsya_za_meditsinskoy_pomoshchyu/ /stati/kogda-nuzhno-obratitsya-za-meditsinskoy-pomoshchyu/
+    Redirect 301 /stati/nachalo_lecheniya/ /stati/nachalo-lecheniya/
+    Redirect 301 /stati/test_na_hla-sovmestimost_/ /stati/test-na-hla-sovmestimost/
+    Redirect 301 /stati/devochka_ili_malchik/ /stati/devochka-ili-malchik/
+    Redirect 301 /zakonodatelnaya-karta /about/zakonodatelnaya-karta/
+    Redirect 301 /filial-zorge /novosti/filialy-na-zorge-75-i-gen-kusimova-15-1/
+    Redirect 301 /spravochnik-zdorovya /patsientu/spravochnik-zdorovya/
+    Redirect 301 /urist/ /konsultatsiya-yurista/
+    Redirect 301 /Zakonodatelnaya_baza /zakonodatelnaya_baza/
+    Redirect 301 /pravila/2088/ /pravila/
+    Redirect 301 /stati/podgotovka-k-obsledovaniyam- /stati/podgotovka-k-obsledovaniyam/
+    Redirect 301 /Zakonodatelnaya_baza /about/zakonodatelnaya-karta/
+    Redirect 301 /uslugi/katalog_donorov_spermi_g_ufa /uslugi/lechenie-besplodiya/katalog-donorov-spermy/
+
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^eko-rb.ru
+    RewriteRule (.*) http://www.eko-rb.ru/$1 [R=301,L]
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+    RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+    RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+    DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+    ExpiresActive on
+    ExpiresByType image/jpeg "access plus 3 day"
+    ExpiresByType image/gif "access plus 3 day"
+    ExpiresByType image/png "access plus 3 day"
+    ExpiresByType text/css "access plus 3 day"
+    ExpiresByType application/javascript "access plus 3 day"
+</IfModule>
+
+php_value mbstring.func_overload 2

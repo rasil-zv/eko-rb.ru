@@ -1,0 +1,13 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetTitle("Видео-материалы");
+?><iframe width="853" height="480" src="https://www.youtube.com/embed/4IpnSLvuK9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> <iframe title="Беременность. Триместры. Ведение беременности" width="640" height="360" src="https://www.youtube.com/embed/VZL2QtzjExQ?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe> <iframe title="Куда вставать на учет по беременности. Здоровый ребенок. Врач акушер – гинеколог." width="640" height="360" src="https://www.youtube.com/embed/MHi_is6WEZ8?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe> <iframe title="Опытные доктора. Оперативное лечение. Хирургия. Аденомиоз. Метропластика." width="640" height="360" src="https://www.youtube.com/embed/tYwST5krcq0?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>  <iframe title="ЭКО программа. Репродуктолог. Как быстро забеременеть" width="640" height="360" src="https://www.youtube.com/embed/mE-LWj6KNos?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe> <iframe title="ИКСИ. Мужское бесплодие Уфа. Как стать папой." width="640" height="360" src="https://www.youtube.com/embed/Wz-iDSYRkfY?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe> <iframe title="УЗИ, УЗИ беременных, Допплерография, Эластография, УЗИ шеи, УЗИ конечностей" width="640" height="360" src="https://www.youtube.com/embed/ueaeHGwGtQE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe> <iframe title="Скрининг Астрая, Нейвазильный пренатальный тест НИПТ, Ведение беременности Уфа" width="640" height="360" src="https://www.youtube.com/embed/apY6_vMX1AM?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe>
+<iframe title="УЗИ Уфа. ОМС. УЗИ сосудов шеи, УЗИ вен нижних конечностей, Выявление рака" width="640" height="360" src="https://www.youtube.com/embed/6h7JRebXjds?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="">
+</iframe><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

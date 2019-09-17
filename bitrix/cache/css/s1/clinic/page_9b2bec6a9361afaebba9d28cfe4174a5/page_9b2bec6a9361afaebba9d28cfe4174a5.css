@@ -1,0 +1,19 @@
+
+
+/* Start:/bitrix/templates/clinic/components/bitrix/search.page/search_page/style.css?1568608925163*/
+a.search-page-params {
+	border-bottom: 1px dashed blue;
+	text-decoration: none;
+}
+div.search-page-params {
+	margin-top: 6px;
+}
+.search-item-rate {font-size: 11px;}
+/* End */
+
+
+/* Start:/bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?156860892351*/
+font.errortext{color:red}font.notetext{color:green}
+/* End */
+/* /bitrix/templates/clinic/components/bitrix/search.page/search_page/style.css?1568608925163 */
+/* /bitrix/components/bitrix/system.show_message/templates/.default/style.min.css?156860892351 */

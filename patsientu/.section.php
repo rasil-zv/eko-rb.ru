@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Пациенту";
+$arDirProperties = Array(
+
+);
+?>

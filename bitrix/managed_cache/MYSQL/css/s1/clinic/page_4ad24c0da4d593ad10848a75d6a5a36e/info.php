@@ -1,0 +1,1 @@
+<? $filesInfo = array( 'FILES' => array("/bitrix/templates/clinic/components/bitrix/news.list/about_adv_detail/style.css" => "1568608925150","/bitrix/components/bitrix/system.pagenavigation/templates/modern/style.css" => "1568608924659","/bitrix/templates/clinic/components/bitrix/news.list/about_licenses/style.css" => "1568608925150",)); ?>
